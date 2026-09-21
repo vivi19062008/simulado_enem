@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --verde-claro: #d9ffad;
+    --verde: #b9f57c;
+    --verde-borda: #77a95b;
+    --roxo: #8d1d62;
+    --rosa: #c23d9e;
+    --rosa-claro: #ef91cf;
+    --cinza: #e8e9ed;
+    --texto: #151515;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f2f2f2;
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* A PÁGINA OCUPA TODA A TELA */
+.pagina {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+    border-left: 2px solid #e6e6e6;
+    border-right: 2px solid #e6e6e6;
+}
+
+.conteudo {
+    width: min(96%, 1050px);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+}
+
+/* CABEÇALHO */
+.cabecalho-simulado {
+    width: 100%;
+    min-height: 150px;
+    background: linear-gradient(135deg, #efffdc, var(--verde-claro));
+    border: 1px solid var(--verde-borda);
+    border-radius: 7px;
+    padding: 22px 30px;
+    text-align: center;
+}
+
+.cabecalho-simulado h1 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.cabecalho-simulado p {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: clamp(12px, 1.3vw, 16px);
+}
+
+.progresso {
+    width: min(100%, 520px);
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 11px;
+}
+
+.linha-progresso {
+    width: 210px;
+    height: 7px;
+    background: #ececec;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.linha-progresso div {
+    width: 35%;
+    height: 100%;
+    background: var(--rosa);
+}
+
+.barra-separadora {
+    width: 72%;
+    max-width: 620px;
+    height: 1px;
+    background: #777;
+    margin: 18px auto 0;
+}
+
+.mensagem {
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #e6ffd2;
+    border: 1px solid var(--verde-borda);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ÁREAS */
+.area {
+    margin-top: 30px;
+}
+
+.area h2 {
+    font-size: clamp(20px, 2.3vw, 30px);
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.bloco-texto {
+    font-size: clamp(11px, 1.15vw, 15px);
+    line-height: 1.45;
+    margin-bottom: 24px;
+}
+
+.bloco-texto p + p {
+    margin-top: 10px;
+}
+
+/* QUESTÕES */
+.questao {
+    width: 100%;
+    margin: 20px 0 26px;
+}
+
+.questao h3 {
+    font-size: clamp(13px, 1.45vw, 18px);
+    margin-bottom: 8px;
+}
+
+.questao p {
+    font-size: clamp(11px, 1.2vw, 15px);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.questao label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 38px;
+    padding: 9px 13px;
+    margin-top: 3px;
+    background: var(--cinza);
+    font-size: clamp(11px, 1.15vw, 14px);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.questao label:hover {
+    background: #dddddf;
+}
+
+.questao input {
+    margin-right: 9px;
+    accent-color: var(--roxo);
+}
+
+/* RESULTADOS */
+.resultado {
+    width: min(100%, 900px);
+    margin: 24px 0 14px;
+    text-align: center;
+}
+
+.resultado-titulo {
+    width: 100%;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rosa);
+    color: white;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.resultado p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.desafio {
+    width: min(78%, 690px);
+    min-height: 42px;
+    padding: 10px 15px;
+    background: var(--verde-claro);
+    border: 1px solid var(--verde-borda);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 32px;
+    font-size: 12px;
+}
+
+.desafio strong {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.desafio-matematica {
+    width: min(76%, 680px);
+}
+
+/* BOTÃO */
+.finalizar {
+    display: block;
+    width: min(100%, 900px);
+    min-height: 46px;
+    margin: 45px auto 0;
+    border: none;
+    border-radius: 10px;
+    background: var(--roxo);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.finalizar:hover {
+    filter: brightness(1.08);
+}
+
+/* MONITORES GRANDES: mantém o conteúdo amplo e proporcional */
+@media (min-width: 1100px) {
+    .conteudo {
+        width: min(88%, 1250px);
+        padding-top: 55px;
+    }
+
+    .cabecalho-simulado {
+        padding: 30px 50px;
+    }
+
+    .area {
+        margin-top: 42px;
+    }
+
+    .questao {
+        margin-top: 26px;
+    }
+
+    .questao label {
+        min-height: 44px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .conteudo {
+        width: 94%;
+        padding: 13px 0 35px;
+    }
+
+    .cabecalho-simulado {
+        min-height: 120px;
+        padding: 15px 10px;
+    }
+
+    .progresso {
+        gap: 6px;
+    }
+
+    .linha-progresso {
+        width: 120px;
+    }
+
+    .area {
+        margin-top: 24px;
+    }
+
+    .questao label {
+        min-height: 34px;
+        padding: 8px;
+    }
+
+    .desafio {
+        width: 88%;
+    }
+}

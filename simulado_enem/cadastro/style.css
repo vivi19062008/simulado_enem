@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.pagina {
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.topo {
+    width: 100%;
+}
+
+.faixa-clara {
+    height: 66px;
+    position: relative;
+    background: linear-gradient(90deg, #e7ffd5 0%, #d9ffbf 45%, #e8ffd5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-topo {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.faixa-clara h1 {
+    font-family: "Baloo 2", Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 800;
+    color: #8d2464;
+    text-shadow:
+            -1px -1px 0 #5d1c55,
+            1px -1px 0 #5d1c55,
+            -1px  1px 0 #5d1c55,
+            1px  1px 0 #5d1c55;
+    transform: translateY(1px);
+}
+
+.menu {
+    height: 26px;
+    background: #8d1d62;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    gap: 28px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.busca {
+    margin-left: auto;
+    margin-right: 22px;
+    width: 132px;
+    height: 19px;
+    border-radius: 20px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.busca span {
+    color: #737373;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 4px;
+    transform: rotate(-20deg);
+}
+
+.busca input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* ================= CONTEÚDO ================= */
+
+main {
+    min-height: calc(100vh - 187px);
+    padding-top: 38px;
+}
+
+.cadastro-card {
+    width: 613px;
+    height: 370px;
+    margin: 0 auto;
+    border: 1px solid #74a34c;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 56% 44%;
+    background: #d8ff91;
+}
+
+.imagem-estudantes {
+    position: relative;
+    background-image:
+            linear-gradient(90deg, transparent 48%, rgba(201, 255, 102, 0.55) 74%, #d8ff91 100%),
+            url("assets/estudantes.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.formulario {
+    background: #d8ff91;
+    padding: 23px 25px 12px 6px;
+}
+
+.formulario h2 {
+    font-family: "Baloo 2", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    margin-bottom: 13px;
+    color: #050505;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 12px;
+    margin-bottom: 7px;
+    color: #111;
+}
+
+.formulario input {
+    width: 100%;
+    height: 31px;
+    border: 1px solid #80b84b;
+    border-radius: 6px;
+    background: rgba(235, 255, 197, 0.62);
+    outline: none;
+    padding: 0 9px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.formulario button {
+    width: 100%;
+    height: 31px;
+    border: none;
+    border-radius: 20px;
+    background: #b146a0;
+    color: #111;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.formulario button:hover {
+    filter: brightness(0.96);
+}
+
+.aviso {
+    width: 100%;
+    font-size: 7px;
+    text-align: center;
+    margin-top: 7px;
+    line-height: 1.1;
+}
+
+.mensagem {
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    margin: -5px 0 8px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    height: 95px;
+    background: #861457;
+    border-top: 10px solid #dcffc2;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px 7px;
+}
+
+.footer-esquerda {
+    width: 310px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #d2d2d2;
+    padding-right: 7px;
+}
+
+.logo-footer {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    margin-right: 9px;
+}
+
+.endereco {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 8px;
+    line-height: 1.1;
+}
+
+.endereco strong {
+    font-size: 11px;
+    color: #e0ff9f;
+}
+
+.endereco b {
+    margin-top: 4px;
+    font-size: 11px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.footer-links {
+    width: 190px;
+    height: 63px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 8px;
+}
+
+.footer-links strong {
+    font-size: 11px;
+    color: #e0ff9f;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icones {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.footer-icones img {
+    width: 39px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Mantém o visual em telas menores */
+@media (max-width: 700px) {
+    .pagina {
+        max-width: 100%;
+    }
+
+    .menu {
+        padding-left: 5vw;
+        gap: 3.7vw;
+    }
+
+    .menu a {
+        font-size: clamp(8px, 1.6vw, 11px);
+    }
+
+    .busca {
+        width: 19vw;
+        margin-right: 3vw;
+    }
+
+    .cadastro-card {
+        width: 88.7vw;
+        height: 53.5vw;
+        min-height: 330px;
+    }
+
+    .formulario h2 {
+        font-size: clamp(25px, 5.2vw, 36px);
+    }
+
+    footer {
+        height: auto;
+        min-height: 95px;
+    }
+
+    .footer-esquerda {
+        width: 45%;
+    }
+
+    .footer-links {
+        width: 29%;
+    }
+
+    .footer-icones img {
+        width: 5.6vw;
+        height: auto;
+    }
+}
+
+
+/* ===== AJUSTE PARA MONITORES =====
+   A página ocupa toda a largura da tela.
+   O conteúdo principal permanece centralizado, como no design original. */
+@media (min-width: 701px) {
+    .faixa-clara {
+        height: 72px;
+    }
+
+    .menu {
+        height: 30px;
+        padding-left: max(80px, 12vw);
+        gap: clamp(28px, 4vw, 70px);
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .busca {
+        width: min(20vw, 260px);
+        margin-right: max(22px, 4vw);
+    }
+
+    .cadastro-card {
+        width: min(88vw, 900px);
+        height: 470px;
+        grid-template-columns: 56% 44%;
+    }
+
+    .formulario {
+        padding: 42px 36px 20px 16px;
+    }
+
+    .formulario h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .formulario label {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .formulario input {
+        height: 40px;
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .formulario button {
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .aviso {
+        font-size: 9px;
+    }
+
+    footer {
+        width: 100%;
+        min-height: 110px;
+        height: auto;
+        padding-left: max(12px, 4vw);
+        padding-right: max(12px, 4vw);
+    }
+
+    .footer-esquerda {
+        width: 42%;
+        min-width: 310px;
+    }
+
+    .footer-links {
+        width: 25%;
+        min-width: 190px;
+    }
+
+    .footer-icones {
+        margin-left: auto;
+    }
+}
+
+/* Telas muito largas */
+@media (min-width: 1400px) {
+    .cadastro-card {
+        width: 980px;
+        height: 510px;
+    }
+
+    .formulario h2 {
+        font-size: 52px;
+    }
+}
+
